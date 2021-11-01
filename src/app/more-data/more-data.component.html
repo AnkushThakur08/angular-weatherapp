@@ -1,0 +1,121 @@
+<section class="p-3">
+  <div class="row p-3">
+    <div
+      class="
+        column-1
+        col-lg-4 col-md-4 col-sm-4
+        d-flex
+        justify-content-center
+        align-items-center
+        flex-column
+      "
+    >
+      <div
+        class="
+          current-temp
+          d-flex
+          justify-content-center
+          align-items-center
+          px-3
+        "
+      >
+        <fa-icon [icon]="faCloudSun" size="3x" class="px-3"></fa-icon>
+        <h1 class="mr-1">{{ weather.main.temp | number: "1.0-0" }}</h1>
+      </div>
+      <br />
+
+      <div
+        class="
+          feels-like
+          d-flex
+          justify-content-center
+          align-items-center
+          px-3
+          water
+        "
+      >
+        <fa-icon [icon]="faWater" size="3x" class="me-1 water-icon"></fa-icon>
+        <h1 class="ps-1">{{ weather.wind.deg }}</h1>
+      </div>
+      <br />
+
+      <div
+        class="feels-like d-flex justify-content-center align-items-center px-3"
+      >
+        <fa-icon
+          [icon]="faRainbow"
+          size="3x"
+          class="me-1 rainbow-icon"
+        ></fa-icon>
+        <h1>{{ weather.main.pressure }}</h1>
+      </div>
+    </div>
+    <br />
+
+    <div class="column-2 col-lg-4 col-md-4 col-sm-4">
+      <div
+        class="humidity d-flex justify-content-center align-items-center px-3"
+      >
+        <fa-icon
+          [icon]="faUmbrella"
+          size="3x"
+          class="me-1 text-primary"
+        ></fa-icon>
+        <h1>{{ weather.main.humidity }}%</h1>
+      </div>
+      <br />
+
+      <div
+        class="
+          cloud
+          d-flex
+          justify-content-center
+          align-items-center
+          cloud
+          px-3
+        "
+      >
+        <fa-icon [icon]="faCloud" size="2x" class="m-2 cloud-icon"></fa-icon>
+        <h1>{{ weather.main.humidity }}</h1>
+      </div>
+      <br />
+
+      <div
+        class="wind-speed d-flex justify-content-center align-items-center px-3"
+      >
+        <fa-icon [icon]="faSnowflake" size="3x" class="me-1"></fa-icon>
+        <h1>{{ weather.wind.speed }}</h1>
+      </div>
+      <br />
+    </div>
+
+    <div class="column-3 col-lg-4 col-md-4 col-sm-4">
+      <div
+        class="
+          wind-direction
+          d-flex
+          justify-content-center
+          align-items-center
+          px-3
+        "
+      >
+        <fa-icon
+          [icon]="faArrowAltCircleUp"
+          size="3x"
+          class="me-1 arrow"
+        ></fa-icon>
+        <h1>{{ weather.wind.deg }}</h1>
+      </div>
+      <br />
+
+      <div
+        class="wind-gust d-flex justify-content-center align-items-center px-3"
+      >
+        <span>
+          <fa-icon [icon]="faWind" size="3x"></fa-icon>
+        </span>
+      </div>
+      <br />
+    </div>
+  </div>
+</section>
