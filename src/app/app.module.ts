@@ -15,6 +15,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppComponent } from './app.component';
 import { WeatherComponent } from './weather/weather.component';
 import { MoreDataComponent } from './more-data/more-data.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, WeatherComponent, MoreDataComponent],
@@ -24,6 +25,7 @@ import { MoreDataComponent } from './more-data/more-data.component';
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(), // ToastrModule added
     FontAwesomeModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

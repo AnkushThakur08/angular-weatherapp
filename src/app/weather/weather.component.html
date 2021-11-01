@@ -1,12 +1,31 @@
 <section>
   <div class="p-4 d-flex justify-content-center align-items-center">
-    <div class="input-group flex-nowrap">
-      <input type="text" class="form-control" placeholder="Enter City Name" />
+    <form [formGroup]="weatherform">
+      <div class="form-group">
+        <div class="input-group flex-nowrap">
+          <input
+            formControlName="search"
+            type="text"
+            class="form-control"
+            id="cityName"
+            name="cityName"
+            placeholder="Enter City Name"
+          />
 
-      <button class="input-group-text" id="addon-wrapping">
-        <fa-icon [icon]="faSearch" size="3x" class="me-1 water-icon"></fa-icon>
-      </button>
-    </div>
+          <button
+            (click)="handleSearch()"
+            class="input-group-text"
+            id="addon-wrapping"
+          >
+            <fa-icon
+              [icon]="faSearch"
+              size="3x"
+              class="me-1 water-icon"
+            ></fa-icon>
+          </button>
+        </div>
+      </div>
+    </form>
   </div>
 
   <div class="d-flex justify-content-center align-items-center p-2">
@@ -19,12 +38,12 @@
   <div class="d-flex justify-content-center align-items-center flex-column p-2">
     <div class="d-flex justify-content-around align-items-center">
       <h1 class="temprature">
-        {{ weather.main.temp | number: "1.0-0" }} &#176;C
+        {{ weather.main ? weather.main.temp : "20" }} &#176;C
       </h1>
     </div>
     <div>
       <h1 class="weather-discription">
-        {{ weather.weather[0]?.description }}
+        {{ weather.weather ? weather.weather[0].description : "20" }}
       </h1>
     </div>
   </div>
@@ -32,11 +51,15 @@
   <div class="weather-stats d-flex justify-content-around text-center p-2">
     <div class="humidity d-flex flex-column">
       <h1 class="weather-more-data">Humidity</h1>
-      <h1 class="weather-more-sub-data">{{ weather.main.humidity }} %</h1>
+      <h1 class="weather-more-sub-data">
+        {{ weather.main ? weather.main.humidity : "20" }} %
+      </h1>
     </div>
     <div class="wind-speed d-flex flex-column">
       <h1 class="weather-more-data">Wind Speed</h1>
-      <h1 class="weather-more-sub-data">{{ weather.wind.speed }} km/j</h1>
+      <h1 class="weather-more-sub-data">
+        {{ weather.wind ? weather.wind.speed : "20" }} km/j
+      </h1>
     </div>
   </div>
 </section>

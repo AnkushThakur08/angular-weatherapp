@@ -18,6 +18,7 @@ import {
 })
 export class MoreDataComponent implements OnInit {
   @Input() weather: any = {};
+  
   constructor() {}
 
   faCloud = faCloud;

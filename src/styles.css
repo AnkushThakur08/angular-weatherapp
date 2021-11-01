@@ -16,6 +16,7 @@
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 :root {
   --bg: #eceff1;
   --row-bg: #f5f5f5;
@@ -266,3 +267,5 @@ body {
     font-size: 1.5rem;
   }
 }
+
+
